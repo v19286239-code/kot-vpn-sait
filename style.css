@@ -520,3 +520,54 @@ footer p {
         white-space: normal;
     }
 }
+
+
+/* Исправление расположения блока поддержки */
+.help-card {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden;
+}
+
+.help-card h3 {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    overflow-wrap: anywhere;
+}
+
+.help-card button,
+.help-card .icon-button {
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    float: none !important;
+    flex: 0 1 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    white-space: normal !important;
+    box-sizing: border-box !important;
+}
+
+@media (max-width: 600px) {
+    .help-card {
+        padding: 16px !important;
+    }
+
+    .help-card h3 {
+        font-size: 16px;
+    }
+
+    .help-card button,
+    .help-card .icon-button {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+}
