@@ -1,105 +1,81 @@
-<link rel="stylesheet" href="style.css">
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
-<script src="app.js" defer></script>
 
-<main class="app">
-    <header class="header">
-       
-<div class="logo">
-    <img src="logo.jpeg" alt="Kot_VPN">
-</div>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090b16">
 
-        <div>
-            <h1>Kot_VPN</h1>
-            <p class="subtitle">Твой цифровой комфорт</p>
-        </div>
-        <div class="status-dot" title="Интерфейс запущен"></div>
-    </header>
+    <title>Kot_VPN — личный кабинет</title>
 
-    <section class="hero">
-        <div class="eyebrow">YOUR PRIVATE SPACE</div>
-        <h2>Интернет.<br><span>На твоих условиях.</span></h2>
-        <p>
-            Управляй подпиской Kot_VPN
-            в одном удобном месте.
-        </p>
-        <div class="shield">✦</div>
-    </section>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main class="app">
+        <header class="header">
+            <div class="logo">
+                <img src="logo.jpeg" alt="Kot_VPN">
+            </div>
+            <div>
+                <h1>Kot_VPN</h1>
+                <p class="subtitle">Твой цифровой комфорт</p>
+            </div>
+        </header>
 
-    <section class="subscription card">
-        <div class="section-heading">
+        <section class="hero">
+            <h2>Интернет.<br><span>На твоих условиях.</span></h2>
+            <p>Управляй подпиской Kot_VPN в одном месте.</p>
+        </section>
+
+        <section class="card subscription">
             <h3>Моя подписка</h3>
-            <span class="pill">DEMO</span>
-        </div>
-        <div class="subscription-info">
-            <div class="plan-icon">⌁</div>
-            <div>
-                <strong id="plan-name">Нет подписки</strong>
-                <p id="plan-status">Выбери тариф для теста</p>
-            </div>
-        </div>
-        <button class="button primary" id="subscription-button">
-            Посмотреть тарифы <span>↗️</span>
-        </button>
-    </section>
+            <p id="plan-name">Нет подписки</p>
+            <p id="plan-status">Выбери тариф для теста</p>
+            <button class="button primary" id="subscription-button">
+                Посмотреть тарифы
+            </button>
+        </section>
 
-    <section class="section" id="plans">
-        <div class="section-heading">
-            <div>
-                <h3>Выбери свой план</h3>
-                <p class="muted">Тестовые тарифы без оплаты</p>
-            </div>
-        </div>
+        <section class="section" id="plans">
+            <h3>Выбери свой план</h3>
 
-        <div class="plan-list">
-            <article class="plan card">
-                <div>
-                    <span class="plan-label">START</span>
-                    <h4>1 месяц</h4>
-                    <p class="muted">30 дней</p>
-                </div>
-                <div class="price">199 ₽</div>
-                <button class="button secondary"
-                        data-plan="30">Выбрать</button>
+            <article class="card plan">
+                <h4>1 месяц</h4>
+                <p>199 ₽</p>
+                <button class="button secondary" data-plan="30">
+                    Выбрать
+                </button>
             </article>
 
-            <article class="plan card featured">
-                <div class="popular">ПОПУЛЯРНЫЙ</div>
-                <div>
-                    <span class="plan-label">PLUS</span>
-                    <h4>3 месяца</h4>
-                    <p class="muted">90 дней</p>
-                </div>
-                <div class="price">499 ₽</div>
-                <button class="button primary"
-                        data-plan="90">Выбрать</button>
+            <article class="card plan">
+                <h4>3 месяца</h4>
+                <p>499 ₽</p>
+                <button class="button primary" data-plan="90">
+                    Выбрать
+                </button>
             </article>
 
-            <article class="plan card">
-                <div>
-                    <span class="plan-label">PRO</span>
-                    <h4>12 месяцев</h4>
-                    <p class="muted">365 дней</p>
-                </div>
-                <div class="price">1 499 ₽</div>
-                <button class="button secondary"
-                        data-plan="365">Выбрать</button>
+            <article class="card plan">
+                <h4>12 месяцев</h4>
+                <p>1 499 ₽</p>
+                <button class="button secondary" data-plan="365">
+                    Выбрать
+                </button>
             </article>
-        </div>
-    </section>
+        </section>
 
-    <section class="card help-card">
-        <div class="help-icon">?</div>
-        <div>
+        <section class="card help-card">
             <h3>Нужна помощь?</h3>
-            <p class="muted">Свяжись с поддержкой Kot_VPN.</p>
-        </div>
-        <button class="icon-button" id="support-button"
-                aria-label="Поддержка">↗️</button>
-    </section>
+            <button class="icon-button" id="support-button">
+                Поддержка
+            </button>
+        </section>
 
-    <footer>
-        <div class="footer-logo">KOT_VPN</div>
-        <p>Интерфейс в разработке · версия 0.1</p>
-    </footer>
-</main>
+        <footer>
+            <p>Kot_VPN · версия 0.1</p>
+        </footer>
+    </main>
+</body>
+</html>
