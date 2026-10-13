@@ -386,3 +386,137 @@ footer p {
         transition: none !important;
     }
 }
+
+
+/* Адаптация Kot_VPN для телефонов */
+@media screen and (max-width: 600px) {
+    html {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        width: 100%;
+        min-width: 0;
+        font-size: 14px;
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .app {
+        width: 100%;
+        max-width: 100%;
+        padding: 18px 16px 28px;
+        margin: 0 auto;
+    }
+
+    .header {
+        gap: 10px;
+        margin-bottom: 22px;
+    }
+
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .hero {
+        padding: 24px 19px;
+        border-radius: 21px;
+    }
+
+    .hero h2 {
+        font-size: clamp(27px, 8vw, 35px);
+        overflow-wrap: anywhere;
+    }
+
+    .hero p {
+        max-width: 80%;
+        font-size: 13px;
+    }
+
+    .shield {
+        right: 10px;
+        bottom: 14px;
+        font-size: 48px;
+    }
+
+    .card {
+        padding: 16px;
+        border-radius: 17px;
+    }
+
+    .plan {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 12px;
+    }
+
+    .price {
+        font-size: 17px;
+    }
+
+    .button {
+        min-height: 48px;
+        font-size: 14px;
+    }
+
+    .glow {
+        max-width: 60vw;
+        max-height: 60vw;
+    }
+
+    .help-card {
+        gap: 10px;
+    }
+
+    .help-card p {
+        overflow-wrap: anywhere;
+    }
+}
+
+/* Для очень узких экранов */
+@media screen and (max-width: 360px) {
+    .app {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .hero {
+        padding: 21px 15px;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .price {
+        font-size: 15px;
+    }
+}
+
+
+/* Исправление кнопки поддержки на телефонах */
+@media screen and (max-width: 600px) {
+    .help-card {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .help-card h3 {
+        flex: 1 1 150px;
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .help-card .icon-button,
+    .help-card button {
+        position: static;
+        flex: 0 0 auto;
+        max-width: 100%;
+        margin-left: auto;
+        white-space: normal;
+    }
+}
