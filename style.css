@@ -1,0 +1,388 @@
+
+:root {
+    color-scheme: dark;
+    --bg: #090b16;
+    --card: rgba(20, 24, 44, 0.88);
+    --text: #f4f5ff;
+    --muted: #969db9;
+    --blue: #6195ff;
+    --purple: #a66bff;
+    --border: rgba(151, 161, 255, 0.17);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Inter, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+.glow {
+    position: fixed;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.22;
+    pointer-events: none;
+}
+
+.glow-blue {
+    background: #286aff;
+    top: 40px;
+    left: -150px;
+}
+
+.glow-purple {
+    background: #892bff;
+    right: -160px;
+    top: 380px;
+}
+
+.app {
+    width: min(100% - 32px, 520px);
+    margin: 0 auto;
+    padding: 24px 0 30px;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+
+.logo {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #090b16;
+    border: 1px solid rgba(97, 149, 255, 0.4);
+    box-shadow: 0 0 22px #397cff35;
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.logo span {
+    color: #d8d0ff;
+}
+
+h1, h2, h3, h4, p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 19px;
+    margin-bottom: 4px;
+}
+
+.subtitle, .muted {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #62edba;
+    margin-left: auto;
+    box-shadow: 0 0 14px #62edba;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 28px 23px;
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    background: linear-gradient(
+        135deg,
+        rgba(40, 70, 140, .35),
+        rgba(87, 42, 143, .22) 65%,
+        rgba(19, 23, 44, .85)
+    );
+    margin-bottom: 18px;
+}
+
+.eyebrow, .plan-label {
+    color: #91b4ff;
+    letter-spacing: 2px;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.hero h2 {
+    font-size: clamp(28px, 7vw, 37px);
+    line-height: 1.16;
+    margin: 15px 0 12px;
+    letter-spacing: -1.2px;
+}
+
+.hero h2 span {
+    background: linear-gradient(90deg, #78a9ff, #c49aff);
+    color: transparent;
+    background-clip: text;
+}
+
+.hero p {
+    max-width: 270px;
+    color: #b6bed6;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.shield {
+    position: absolute;
+    right: 18px;
+    bottom: 16px;
+    color: #a2aaff;
+    font-size: 68px;
+    opacity: .5;
+    text-shadow: 0 0 30px #805bff;
+}
+
+.card {
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--card);
+    padding: 19px;
+    backdrop-filter: blur(12px);
+}
+
+.subscription {
+    margin-bottom: 29px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-heading h3, .help-card h3 {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.pill {
+    border-radius: 30px;
+    padding: 5px 9px;
+    color: #c4b2ff;
+    background: #8c60ff20;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.subscription-info {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin: 21px 0;
+}
+
+.plan-icon, .help-icon {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #284f9e, #7040a8);
+    font-size: 25px;
+}
+
+.subscription-info strong {
+    font-size: 15px;
+}
+
+.subscription-info p {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 6px 0 0;
+}
+
+.button {
+    width: 100%;
+    min-height: 45px;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    font-size: 13px;
+    font-weight: 750;
+    transition: transform .15s, filter .15s;
+}
+
+.button:active, .icon-button:active {
+    transform: scale(.98);
+}
+
+.primary {
+    color: white;
+    background: linear-gradient(100deg, #397dff, #9252ff);
+    box-shadow: 0 5px 22px #704dff25;
+}
+
+.primary span {
+    float: right;
+    margin-right: 13px;
+}
+
+.secondary {
+    color: #e1e5ff;
+    background: #ffffff08;
+    border-color: var(--border);
+}
+
+.section {
+    margin-bottom: 27px;
+}
+
+.section > .section-heading {
+    margin-bottom: 15px;
+}
+
+.plan-list {
+    display: grid;
+    gap: 12px;
+}
+
+.plan {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 13px;
+}
+
+.plan h4 {
+    margin: 9px 0 5px;
+    font-size: 16px;
+}
+
+.price {
+    font-size: 19px;
+    font-weight: 850;
+    white-space: nowrap;
+}
+
+.plan .button {
+    grid-column: 1 / -1;
+}
+
+.featured {
+    border-color: #8d6cff80;
+    background: linear-gradient(
+        110deg,
+        #202b4e,
+        #2c2047
+    );
+    padding-top: 29px;
+}
+
+.popular {
+    position: absolute;
+    right: 14px;
+    top: 0;
+    transform: translateY(-1px);
+    padding: 5px 8px;
+    background: linear-gradient(90deg, #4d86ff, #a15aff);
+    border-radius: 0 0 8px 8px;
+    font-size: 9px;
+    font-weight: 850;
+}
+
+.help-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.help-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    font-size: 19px;
+}
+
+.help-card h3 {
+    margin-bottom: 5px;
+}
+
+.help-card p {
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.icon-button {
+    margin-left: auto;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: #ffffff08;
+    color: white;
+    width: 39px;
+    height: 39px;
+    font-size: 20px;
+}
+
+footer {
+    text-align: center;
+    padding-top: 26px;
+}
+
+.footer-logo {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #aab5ff;
+    margin-bottom: 8px;
+}
+
+footer p {
+    font-size: 10px;
+    color: #68708b;
+}
+
+@media (min-width: 480px) {
+    .plan-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        transition: none !important;
+    }
+}
