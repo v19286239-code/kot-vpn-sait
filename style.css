@@ -695,3 +695,36 @@ button[data-action]:focus-visible,
         padding: 24px 16px 18px;
     }
 }
+
+
+/* Постоянная плашка демо-режима */
+.demo-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 18px 0;
+    padding: 15px;
+    border: 1px solid rgba(139, 92, 246, 0.5);
+    border-radius: 14px;
+    background: rgba(99, 102, 241, 0.12);
+    color: #f8fafc;
+}
+
+.demo-banner__icon {
+    font-size: 24px;
+    color: #a5b4fc;
+}
+
+.demo-banner strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.demo-banner p {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.5;
+}

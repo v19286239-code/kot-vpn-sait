@@ -384,3 +384,19 @@ if (window.Telegram?.WebApp) {
         }
     });
 }
+
+
+document.addEventListener("click", function (event) {
+    const button = event.target.closest("[data-action]");
+    if (!button) return;
+
+    const action = button.dataset.action;
+
+    if (action === "connect") {
+        showConnection();
+    } else if (action === "subscription") {
+        showSubscription();
+    } else if (action === "support") {
+        showSupport();
+    }
+});
